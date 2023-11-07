@@ -50,25 +50,24 @@ public void choisir_l_option_code() {
 
 @Then("Saisir le code")
 public void saisir_le_code() {
+	vld_cmd.saisir_le_code();
 	
 }
 
 @Then("Cliquer sur btn registre")
 public void cliquer_sur_btn_registre() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+   vld_cmd.cliquer_sur_enregistrer();
 }
 
 @Then("cliquer sur oui pour confirmer la validation")
 public void cliquer_sur_oui_pour_confirmer_la_validation() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+    vld_cmd.cliquer_sur_oui();
 }
 
-@Then("vérifier que la validation est fait")
+@Then("vérifier la validation a été effectuée")
 public void vérifier_que_la_validation_est_fait() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+	vld_cmd.vérifier_la_validation_aété_effectuée(); ;
+   
 }
 
 
