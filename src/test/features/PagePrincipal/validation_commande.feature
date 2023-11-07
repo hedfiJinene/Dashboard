@@ -15,7 +15,7 @@ Feature: Validation d'une commande
     And Cliquer sur le menu Détails
     And Cliquer sur le bouton provisionner
    Then Choisir l'option code
-  # And Saisir le code 
-   #And Cliquer sur btn registre
-   #And cliquer sur oui pour confirmer la validation
-   #And vérifier que la validation est fait
+   And Saisir le code 
+   And Cliquer sur btn registre
+   And cliquer sur oui pour confirmer la validation
+   And vérifier que la validation a été effectuée
