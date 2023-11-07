@@ -5,7 +5,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(tags ="@tag1"
-,features = "src/test/features/PagePrincipal/validation_commande.feature"
+,features = "src/test/features/PagePrincipal/changement_statut_lead.feature"
 ,glue= {"StepDefinition","Hooks"}
 ,publish = true 
 ,plugin = {"pretty"
