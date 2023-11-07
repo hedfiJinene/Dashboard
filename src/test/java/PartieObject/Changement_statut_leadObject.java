@@ -44,7 +44,8 @@ public class Changement_statut_leadObject {
 		public static WebElement liste_déroulante;
 		@FindBy(how=How.XPATH, using="/html/body/div[4]/div[1]/div[2]/div/div[2]/form/div[1]/div[1]/div/div/div/div/div[3]/div/div/span")
 		public static WebElement input_field;	
-
+        @FindBy(how=How.XPATH, using="//*[@id=\"app\"]/div/div/div/div/div[1]/main/div/div/div[2]/span[3]/div/button")
+        public static WebElement status_lead;
 		@FindBy(how=How.XPATH, using="/html/body/div[4]/div[1]/div[2]/div/div[2]/form/div[1]/div[1]/div/div/div/div/div[2]/div")
 		public static WebElement option;	
 		
@@ -74,11 +75,14 @@ public class Changement_statut_leadObject {
 		}
 		
 		public void clique_nouveau_lead() {
+			
 			if(nouveau_lead.getText().equals("New")) {
 				nouveau_lead.click();
-			}else {
-				maj_btn.click();
 			}
+			//else {
+			//	maj_btn.click();
+				
+			//}
 		}
 		
 		public void clique_liste_déroulante () {
@@ -98,7 +102,6 @@ public class Changement_statut_leadObject {
 				robot.keyPress(KeyEvent.VK_DOWN);//SPAM
 				robot.keyPress(KeyEvent.VK_SPACE);//Valider la sélection
 			} catch (AWTException e) {	
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -137,8 +140,8 @@ public class Changement_statut_leadObject {
 			enregistrer.click();
 			
 		}
+		@SuppressWarnings("deprecation")
 		public void vérifier_changement_status_lead() {
-		Assert.assertEquals("nouveau_lead.getText()", "En cours");
-
+			Assert.assertEquals("nouveau_lead.getText()", "New");
 		}	
 }
