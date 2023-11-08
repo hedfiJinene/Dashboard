@@ -56,8 +56,7 @@ public class Changement_statut_leadObject {
 		public static WebElement enregistrer;
 				
 
-		@FindBy(how=How.XPATH, using="//*[@id=\"app\"]/div/div/div/div/div[1]/main/div/div/div[2]/span[2]/div/button/span[3]")
-		public static WebElement maj_btn;
+		  
 				
 		//Déclaration des méthodes
 		public void clique_backoffice() {
